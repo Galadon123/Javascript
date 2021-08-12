@@ -1,0 +1,44 @@
+|<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p id="hello"></p>
+        <input id="read" type="text">
+        <button id="update">submit</button>
+       <button id="show">Show the input text</button>
+       <h1>Comments Updater</h1>
+       <div id="comments">
+             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit incidunt atque praesentium sunt dolorum earum, aspernatur veritatis, sint asperiores pariatur, magnam ipsum delectus suscipit perspiciatis nulla reiciendis provident nesciunt! Aspernatur.</p>
+             <p>Praesentium, quisquam repellendus! Voluptatibus nihil repellat rerum repellendus nostrum, quia minus suscipit! Minus dolores qui, doloribus obcaecati consectetur libero debitis unde error dignissimos voluptatibus. Sunt, modi. Non, amet earum! Earum?</p>
+       </div>
+        <div id="commentsbox">
+            <textarea name="read" id="fuchka" cols="60" rows="6"></textarea>
+            <br>
+            <button id="post">Post your comment</button>
+        </div>
+       <script>
+           document.getElementById('show').addEventListener('click',function(){
+               document.getElementById('hello').innerHTML='hello! munshi abdur rahim';
+           })
+           document.getElementById('update').addEventListener('click',function()
+           {
+            document.getElementById('hello').innerHTML=document.getElementById('read').value;
+            document.getElementById('read').value='';
+           })
+
+
+           document.getElementById('post').addEventListener('click',function()
+           {
+               var a=document.createElement('p');
+               a.innerHTML=document.getElementById('fuchka').value;
+               document.getElementById('comments').appendChild(a);
+               document.getElementById('fuchka').value='';
+           })
+       </script>
+</body>
+</html>
